@@ -1,0 +1,504 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    max-width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+.flex-conatiner {
+    display: flex;
+    box-sizing: content-box;
+    flex-wrap: space-between;
+    align-content: center;
+}
+
+.background {
+    background-color: rgb(255, 255, 255);
+}
+
+main {
+    overflow: auto;
+}
+
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background: inherit;
+    padding: 0.3rem;
+    border-bottom: 0.1rem solid#000;
+    font-size: 2rem;
+    padding: 8px;
+}
+
+header {
+    font-size: 2rem;
+    text-align: left;
+    padding: 10px;
+}
+header, nav {
+    display: inline-block;
+}
+nav {
+    margin: auto 0;
+    float: right;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(0, 1, 2);
+    font-weight: 5rem;
+    margin-right: 2rem;
+    font-size: 1rem;
+    letter-spacing: 0.11rem;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Mission */
+
+#mission {
+    background-image: url("../imgs/mission.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 58rem;
+    margin: 0 auto;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 1.85rem;
+    letter-spacing: 0.25rem;
+    padding-bottom: 0.5rem;
+}
+p {
+    padding: 0.2rem 0;
+    line-height: 1.5rem;
+    font-size: 1rem;
+}
+
+#statement {
+    position: relative;
+    top: 35%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.8;
+    padding: 2rem 0;
+    
+}
+
+#statement h1,
+#statement p {
+    color:rgb(167, 184, 201);
+    max-width: 75%;
+    margin: auto;
+}
+
+/* Our Dogs Section */
+
+h2 {
+    color:rgb(2, 59, 116);
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding: 1.5rem 0;
+    letter-spacing: 0.15rem;
+}
+h4 { font-weight: 500;
+    letter-spacing: 0.19;
+    font-size: 1.05rem;
+    padding: 0.3rem 0;
+
+}
+
+#dogs {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 350%;
+    padding: 3rem 0;
+}
+
+#dogs h2,
+#dogs h4 {
+    max-width: 75%;
+}
+
+#gallery {
+    width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 3rem;
+    margin: 0 auto;
+}
+
+#gallery img {
+    width: 280px;
+    border-radius: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+#gallery p {
+    width: 300px;
+}
+.image {
+    padding: 1rem;
+}
+
+/* TEAM SECTION */
+
+#team {
+    background-color: rgb(255, 246, 246);
+}
+
+h3 {
+    font-weight: 1000;
+    font-size: 2rem;
+    letter-spacing: 0.30rem;
+    padding-top: 1rem;
+    text-align: center;
+    color:rgb(2, 59, 116);
+    
+}
+
+.row {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 400%;
+    padding: 8rem 0;
+    
+}
+
+.column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+
+.card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        width: 65%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-top: 2.5rem;
+        background-color:  rgb(2, 253, 253);
+      }
+
+.container {
+        padding: 0 16px;
+      }
+
+.container::after, .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+.title {
+    color: grey;
+  }
+
+  .smallp {
+      font-size: 13px;
+  }
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 6px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+
+  }
+.button:hover {
+    background-color: #555;
+}
+
+/* Foooter */
+
+#contact {
+    height: 11rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact h2 {
+    padding: 3rem 0 1rem;
+}
+
+#copyright {
+    padding-bottom: 1rem;
+}
+
+#copyright p {
+    padding-left: 2rem;
+}
+
+
+/* Media Style */
+
+@media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+.container {
+    overflow-wrap: break-word;
+}
+.row {
+    flex-wrap: wrap;
+}
+
+}
+
+@media only screen and (max-width: 481px) {
+    nav a{
+        display: block;
+        font-size: 14px;
+    }
+
+    #logo {
+        max-height: 2.5rem;
+    }
+    
+    #mission {
+        height: 30rem;
+    }
+
+    #statement {
+        padding: 1rem 0;
+        top: 15%;
+        opacity: 0.6;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+        padding-bottom: 0;
+    }
+
+    h1:last-of-type {
+        padding-bottom: 0.5rem;
+    }
+
+    p {
+        font-size: 0.75rem;
+        opacity: 1;
+        line-height: 1.25rem;
+    }
+    
+    #statement h1,
+    #statement p {
+        max-width: 90%;
+        margin: auto;
+    }
+
+    h2 {
+        font-size: 1.15rem;
+        padding: 0.75rem 0;
+    }
+
+    h4 {
+        font-size: 0.85rem;
+        line-height: 1.25rem;
+        padding: 0.25rem 0; 
+    }
+
+    #products {
+        padding: 5rem 0 2rem;
+    }
+    
+    #products h2,
+    #products h4 {
+        max-width: 90%;
+    }   
+
+    #gallery {
+        width: 100%;
+    }
+
+    #gallery img {
+        width: 80%;
+        height: auto;
+        border-radius: 2rem;
+        margin-bottom: 1rem;
+    }
+
+   .image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+/* Tablet Portrait Design */
+
+@media only screen and (max-width: 641px) {
+    nav a{
+        display: block;
+        font-size: 1rem;
+    }
+
+
+    #mission {
+        height: 35rem;
+    }
+
+    #statement {
+        padding: 1.5rem 0;
+        top: 25%;
+        opacity: 0.6;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        padding-bottom: 0;
+    }
+
+    h1:last-of-type {
+        padding-bottom: 0.5rem;
+    }
+
+    p {
+        font-size: 0.85rem;
+        opacity: 1;
+        line-height: 1.35rem;
+    }
+    
+    #statement h1,
+    #statement p {
+        max-width: 90%;
+        margin: auto;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+        padding: 0.75rem 0;
+    }
+
+    h4 {
+        font-size: 1rem;
+        line-height: 1.35rem;
+        padding: 0.25rem 0; 
+    }
+
+    #products {
+        padding: 6rem 0 3rem;
+    }
+    
+    #products h2,
+    #products h4 {
+        max-width: 90%;
+    }   
+
+    #gallery {
+        width: 100%;
+    }
+
+    #gallery img {
+        width: 80%;
+        height: auto;
+        border-radius: 2rem;
+        margin-bottom: 1rem;
+    }
+
+   .image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+/* Tablet Landscape Design */
+
+@media only screen and (max-width: 961px) {
+    nav a{
+        display: block;
+    }
+
+    #mission {
+        height: 40rem;
+    }
+    
+    #statement {
+        padding: 1.5rem 0;
+        top: 35%;
+        opacity: 0.6;
+    }
+    
+    h1 {
+        font-size: 1.7rem;
+        padding-bottom: 0;
+    }
+    
+    h1:last-of-type {
+        padding-bottom: 0.5rem;
+    }
+    
+    p {
+        font-size: 1rem;
+        opacity: 1;
+        line-height: 1.35rem;
+    }
+    
+    #statement h1,
+    #statement p {
+        max-width: 90%;
+        margin: auto;
+    }
+    
+    h2 {
+        font-size: 1.35rem;
+        padding: 0.75rem 0;
+    }
+    
+    h4 {
+        font-size: 1.05rem;
+        line-height: 1.35rem;
+        padding: 0.25rem 0; 
+    }
+    
+    #products {
+        padding: 8rem 0 6rem;
+    }
+    
+    #products h2,
+    #products h4 {
+        max-width: 90%;
+    }   
+    
+
+    
+    
+    #contact {
+        height: 8rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #contact h2 {
+        padding: 1.5rem 0 0.5rem;
+    }
+
+}
